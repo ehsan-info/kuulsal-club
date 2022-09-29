@@ -1,0 +1,38 @@
+[
+    {
+        "id": "6334ef1dfb1632b12601db8a",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Football_in_Bloomington%2C_Indiana%2C_1996.jpg",
+        "name": "Football",
+        "about": "Football, also called association football or soccer, is a game involving two teams of 11 players who try to maneuver the ball into the other team's goal without using their hands or arms. The team that scores more goals wins.\r\n"
+    },
+    {
+        "id": "6334ef1da50ca5b4512b378a",
+        "picture": "https://i.ytimg.com/vi/X5TSj3lGceY/maxresdefault.jpg",
+        "name": "Cricket",
+        "about": "Cricket is a bat-and-ball game played between two teams of eleven players on a field at the centre of which is a 22-yard (20-metre) pitch with a wicket at each end, each comprising two bails balanced on three stumps. The batting side scores runs by striking the ball bowled at the wicket with the bat and then running between the wickets, while the bowling and fielding side tries to prevent this and dismiss each batter.\r\n"
+    },
+    {
+        "id": "6334ef1d41fd7fb9b2a03943",
+        "picture": "https://img.freepik.com/premium-vector/badminton-player-smash-match-competition-sport-stadium-cartoon-illustration-vector_201904-955.jpg?w=2000",
+        "name": "Badminton",
+        "about": "Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are 'singles' and 'doubles'.\r\n"
+    },
+    {
+        "id": "6334ef1defc965f9b43b6891",
+        "picture": "https://www.javeatravelguide.com/wp-content/uploads/2022/02/Tennis-in-Javea.jpg",
+        "name": "Tennis",
+        "about": "Tennis is a racket sport that is played either individually against a single opponent or between two teams of two players each. Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court.\r\n"
+    },
+    {
+        "id": "6334ef1d3b831885a7b54ae1",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Carter_vs_Gasol%2C_Lakers_vs_Magic.jpg/640px-Carter_vs_Gasol%2C_Lakers_vs_Magic.jpg",
+        "name": "Basketball",
+        "about": "Basketball is a game played between two teams of five players each on a rectangular court, usually indoors. Each team tries to score by tossing the ball through the opponent's goal, an elevated horizontal hoop and net called a basket.\r\n"
+    },
+    {
+        "id": "6334ef1d4ec9a57d9acad73f",
+        "picture": "https://www.timeoutriyadh.com/cloud/timeoutriyadh/2021/09/30/lcJcmAZT-shutterstock_400441870-1200x760.jpg",
+        "name": "Bowling",
+        "about": "Bowling, also called tenpins, game in which a heavy ball is rolled down a long, narrow lane toward a group of objects known as pins, the aim being to knock down more pins than an opponent\r\n"
+    }
+]
