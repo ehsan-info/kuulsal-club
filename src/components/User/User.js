@@ -1,9 +1,15 @@
 import React from 'react';
 import userImg from '../../images/james.jpg';
 import './User.css'
-const User = () => {
+const User = (props) => {
+    const { exerciseTime } = props;
+    let totalGameTime = 0;
+    for (const gameTime of exerciseTime) {
+        totalGameTime += gameTime.time;
+    }
     return (
         <div className='user-data-track'>
+            <p>{exerciseTime.length}</p>
             <div className='user-details'>
                 <div className='user-img'>
                     <img src={userImg} alt="" />
@@ -41,7 +47,7 @@ const User = () => {
                 <p>Total Game Details</p>
                 <div className='game-detail'>
                     <p>Game Time</p>
-                    <p>200seconds</p>
+                    <p>{totalGameTime}seconds</p>
                 </div>
                 <div className='game-break'>
                     <p>Break Time</p>

@@ -78,7 +78,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #F2F4FA;
-    padding: 25px 10px;
+    padding: 25px 5px;
     border-radius: 15px;
     margin-bottom: 20px;
 }
@@ -86,6 +86,7 @@
 .game-detail p,
 .game-break p {
     margin: 0;
+    font-size: 15px;
 }
 
 .btn-activity {

@@ -9,7 +9,13 @@ const Sports = () => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setSports(data))
-    }, [])
+    }, []);
+    const [exerciseTime, setExerciseTime] = useState([]);
+    const handleExerciseTime = (selectedGame) => {
+        // console.log(selectedGame);
+        const newExerciseTime = [...exerciseTime, selectedGame];
+        setExerciseTime(newExerciseTime);
+    }
     return (
         <div className="body-container">
             <div className='body-left'>
@@ -18,13 +24,13 @@ const Sports = () => {
                     <h3>Select Today's Game</h3>
                     <div className='game-container'>
                         {
-                            sports.map(sport => <Game key={sport.id} sport={sport}></Game>)
+                            sports.map(sport => <Game key={sport.id} sport={sport} handleExerciseTime={handleExerciseTime}></Game>)
                         }
                     </div>
                 </div>
             </div>
             <div className='body-right'>
-                <User></User>
+                <User exerciseTime={exerciseTime}></User>
             </div>
         </div>
     );
