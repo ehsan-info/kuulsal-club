@@ -1,7 +1,6 @@
 .games-list {
     width: 300px;
     height: 510px;
-    border: 1px solid #95A0A7;
     border-radius: 8px;
     position: relative;
     background-color: #ffffff;
@@ -22,6 +21,7 @@
     margin-bottom: 0;
     margin-top: 5px;
     color: #8c9497;
+    height: 180px;
 }
 
 .game-name {
@@ -48,10 +48,12 @@
 }
 
 .btn-cart .btn-text {
-    margin-right: 5px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .btn-cart:hover {
-    background-color: orange;
+    background-color: #f7b02f;
     cursor: pointer;
 }

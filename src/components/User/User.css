@@ -1,0 +1,111 @@
+.user-data-track {
+    margin-top: 20px;
+}
+
+.user-details {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.user-name h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.user-name p {
+    margin: 0;
+    font-size: 12px;
+    color: grey;
+}
+
+.user-health {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+    margin: 25px 0;
+    padding: 10px;
+    background-color: #F2F4FA;
+    border-radius: 15px;
+}
+
+.user-health h1 {
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.user-health h1 small {
+    color: #c9c9c9;
+}
+
+.user-health p {
+    color: #746262;
+    margin: 0;
+}
+
+.break-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 10px;
+    background-color: #F2F4FA;
+    border-radius: 15px;
+}
+
+.break-time p {
+    background-color: #ffffff;
+    padding: 4px;
+    margin: 0;
+    border-radius: 14px;
+}
+
+.break-time p:hover {
+    background-color: #FF9900;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.game-detail,
+.game-break {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F2F4FA;
+    padding: 25px 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.game-detail p,
+.game-break p {
+    margin: 0;
+}
+
+.btn-activity {
+    width: 100%;
+    background: #FF9900;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+}
+
+.btn-activity .activity-text {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.btn-activity:hover {
+    background-color: #f7b02f;
+    cursor: pointer;
+}

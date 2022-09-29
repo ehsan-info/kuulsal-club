@@ -1,3 +1,14 @@
+.body-left {
+    margin-top: 80px;
+}
+
+.body-right {
+    background: #ffffff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
 .game-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
