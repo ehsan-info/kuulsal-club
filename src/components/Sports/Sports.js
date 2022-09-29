@@ -3,16 +3,25 @@ import React, { useEffect, useState } from 'react';
 import Game from '../Game/Game';
 import './Sports.css';
 import User from '../User/User';
+import { displayData } from '../../utilities/loadData';
 const Sports = () => {
     const [sports, setSports] = useState([]);
+    const [exerciseTime, setExerciseTime] = useState([]);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setSports(data))
     }, []);
-    const [exerciseTime, setExerciseTime] = useState([]);
+    useEffect(() => {
+        const storedTime = displayData();
+        let saveTime;
+        for (const storeTime in storedTime) {
+            saveTime = storeTime;
+            console.log(saveTime);
+        }
+
+    }, [sports]);
     const handleExerciseTime = (selectedGame) => {
-        // console.log(selectedGame);
         const newExerciseTime = [...exerciseTime, selectedGame];
         setExerciseTime(newExerciseTime);
     }
@@ -27,6 +36,9 @@ const Sports = () => {
                             sports.map(sport => <Game key={sport.id} sport={sport} handleExerciseTime={handleExerciseTime}></Game>)
                         }
                     </div>
+                </div>
+                <div>
+
                 </div>
             </div>
             <div className='body-right'>

@@ -1,8 +1,15 @@
 import React from 'react';
 import userImg from '../../images/james.jpg';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { displayData, loadData } from '../../utilities/loadData';
 import './User.css'
 const User = (props) => {
+    const showToastMessage = () => {
+        toast.success('Success Notification !', {
+            position: toast.POSITION.TOP_CENTER
+        });
+    };
     const { exerciseTime } = props;
     let totalGameTime = 0;
     for (const gameTime of exerciseTime) {
@@ -13,8 +20,8 @@ const User = (props) => {
     }
     /* const getData = displayData();
     console.log(getData); */
-    const savedTime = displayData();
-    console.log(savedTime);
+    /* const savedTime = displayData();
+    console.log(savedTime); */
     return (
         <div className='user-data-track'>
             <div className='user-details'>
@@ -58,12 +65,16 @@ const User = (props) => {
                 </div>
                 <div className='game-break'>
                     <p>Break Time</p>
-                    <p>{savedTime}seconds</p>
+                    <p>{ }seconds</p>
                 </div>
             </div>
-            <button className='btn-activity'>
-                <p className='activity-text'>Activity Completed</p>
-            </button>
+
+            <div>
+                <button className='btn-activity' onClick={showToastMessage}>
+                    <p className='activity-text'>Activity Completed</p>
+                </button>
+                <ToastContainer />
+            </div>
         </div>
     );
 };

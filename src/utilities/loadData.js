@@ -13,14 +13,16 @@ const loadData = breakTime => {
     localStorage.setItem('break-data', JSON.stringify(breakTimeData));
 }
 const displayData = () => {
+    let storedTime = {};
     const storedData = localStorage.getItem('break-data');
     if (storedData) {
-        const storedTime = JSON.parse(storedData);
-        let saveTime;
+        storedTime = JSON.parse(storedData);
+        /* let saveTime;
         for (const storeTime in storedTime) {
             saveTime = storeTime;
-        }
-        return saveTime;
+        } */
+
     }
+    return storedTime;
 }
 export { loadData, displayData }
