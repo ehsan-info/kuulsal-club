@@ -7,23 +7,18 @@ import { displayData } from '../../utilities/loadData';
 const Sports = () => {
     const [sports, setSports] = useState([]);
     const [exerciseTime, setExerciseTime] = useState([]);
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setSports(data))
     }, []);
-    useEffect(() => {
-        const storedTime = displayData();
-        let saveTime;
-        for (const storeTime in storedTime) {
-            saveTime = storeTime;
-            console.log(saveTime);
-        }
-
-    }, [sports]);
     const handleExerciseTime = (selectedGame) => {
         const newExerciseTime = [...exerciseTime, selectedGame];
         setExerciseTime(newExerciseTime);
+    }
+    const getBreakTime = (selectedTime) => {
+        console.log(selectedTime);
     }
     return (
         <div className="body-container">

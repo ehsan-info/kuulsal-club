@@ -2,7 +2,7 @@ import React from 'react';
 import userImg from '../../images/james.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { displayData, loadData } from '../../utilities/loadData';
+import { displayData, displayGameTime, loadData, loadGameTime } from '../../utilities/loadData';
 import './User.css'
 const User = (props) => {
     const showToastMessage = () => {
@@ -10,18 +10,19 @@ const User = (props) => {
             position: toast.POSITION.TOP_CENTER
         });
     };
-    const { exerciseTime } = props;
+    const { exerciseTime, handleExerciseTime } = props;
+    console.log(handleExerciseTime);
     let totalGameTime = 0;
     for (const gameTime of exerciseTime) {
         totalGameTime += gameTime.time;
     }
-    const getBreakTime = breakTime => {
+    const getBreakTime = (breakTime) => {
         loadData(breakTime);
     }
-    /* const getData = displayData();
-    console.log(getData); */
-    /* const savedTime = displayData();
-    console.log(savedTime); */
+
+    loadGameTime(totalGameTime);
+    const savedTime = displayData();
+    const savedGameTime = displayGameTime();
     return (
         <div className='user-data-track'>
             <div className='user-details'>
@@ -50,22 +51,22 @@ const User = (props) => {
             <div className='break-time-container'>
                 <p>Break Time</p>
                 <div className='break-time'>
-                    <p onClick={() => getBreakTime(10)}>10s</p>
-                    <p onClick={() => getBreakTime(20)}>20s</p>
-                    <p onClick={() => getBreakTime(30)}>30s</p>
-                    <p onClick={() => getBreakTime(40)}>40s</p>
-                    <p onClick={() => getBreakTime(50)}>50s</p>
+                    <p onClick={() => getBreakTime(10, window.location.reload(false))}>10s</p>
+                    <p onClick={() => getBreakTime(20, window.location.reload(false))}>20s</p>
+                    <p onClick={() => getBreakTime(30, window.location.reload(false))}>30s</p>
+                    <p onClick={() => getBreakTime(40, window.location.reload(false))}>40s</p>
+                    <p onClick={() => getBreakTime(50, window.location.reload(false))}>50s</p>
                 </div>
             </div>
             <div className='game-details-time'>
                 <p>Total Game Details</p>
                 <div className='game-detail'>
                     <p>Game Time</p>
-                    <p>{totalGameTime}seconds</p>
+                    <p>{savedGameTime}seconds</p>
                 </div>
                 <div className='game-break'>
                     <p>Break Time</p>
-                    <p>{ }seconds</p>
+                    <p>{savedTime}seconds</p>
                 </div>
             </div>
 

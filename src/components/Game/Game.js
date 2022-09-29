@@ -3,6 +3,7 @@ import './Game.css';
 const Game = (props) => {
     const { handleExerciseTime, sport } = props;
     const { name, picture, about, time } = sport;
+    console.log(props)
     return (
         <div className='games-list'>
             <img src={picture} alt="" />
