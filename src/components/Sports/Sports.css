@@ -14,3 +14,29 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+
+@media only screen and (max-width: 400px) {
+    .body-left {
+        margin: 0 10px;
+    }
+
+    .game-container {
+        display: block;
+        gap: 15px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 760px) {
+    .body-left {
+        margin: 0 10px;
+    }
+
+    .body-left h3 {
+        text-align: center;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
