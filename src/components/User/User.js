@@ -1,5 +1,6 @@
 import React from 'react';
 import userImg from '../../images/james.jpg';
+import { displayData, loadData } from '../../utilities/loadData';
 import './User.css'
 const User = (props) => {
     const { exerciseTime } = props;
@@ -7,9 +8,15 @@ const User = (props) => {
     for (const gameTime of exerciseTime) {
         totalGameTime += gameTime.time;
     }
+    const getBreakTime = breakTime => {
+        loadData(breakTime);
+    }
+    /* const getData = displayData();
+    console.log(getData); */
+    const savedTime = displayData();
+    console.log(savedTime);
     return (
         <div className='user-data-track'>
-            <p>{exerciseTime.length}</p>
             <div className='user-details'>
                 <div className='user-img'>
                     <img src={userImg} alt="" />
@@ -36,11 +43,11 @@ const User = (props) => {
             <div className='break-time-container'>
                 <p>Break Time</p>
                 <div className='break-time'>
-                    <p>10s</p>
-                    <p>20s</p>
-                    <p>30s</p>
-                    <p>40s</p>
-                    <p>50s</p>
+                    <p onClick={() => getBreakTime(10)}>10s</p>
+                    <p onClick={() => getBreakTime(20)}>20s</p>
+                    <p onClick={() => getBreakTime(30)}>30s</p>
+                    <p onClick={() => getBreakTime(40)}>40s</p>
+                    <p onClick={() => getBreakTime(50)}>50s</p>
                 </div>
             </div>
             <div className='game-details-time'>
@@ -51,7 +58,7 @@ const User = (props) => {
                 </div>
                 <div className='game-break'>
                     <p>Break Time</p>
-                    <p>15seconds</p>
+                    <p>{savedTime}seconds</p>
                 </div>
             </div>
             <button className='btn-activity'>
